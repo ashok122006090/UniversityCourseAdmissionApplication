@@ -1,5 +1,5 @@
 package com.cg.mts.repository;
 
-public class LoginRepository {
+public interface LoginRepository {
 
 }
