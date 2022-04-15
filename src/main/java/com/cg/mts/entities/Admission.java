@@ -2,7 +2,11 @@ package com.cg.mts.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Admission {
+	@Id
 	int admid;
 	int courseid;
 	int appid;
