@@ -1,5 +1,5 @@
 package com.cg.mts.repository;
 
-public class CourseRepository {
+public interface CourseRepository {
 
 }
