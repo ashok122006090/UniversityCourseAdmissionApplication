@@ -8,6 +8,7 @@ public class UniversityCourseAdministrationApplApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UniversityCourseAdministrationApplApplication.class, args);
+		System.out.println("connected");
 	}
 
 }
