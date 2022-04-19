@@ -1,5 +1,8 @@
 package com.cg.mts.service;
 
+
+public class ApplicantService {
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +18,6 @@ public class ApplicantService implements IApplicantService{
 	public Applicant addApplicant(Applicant a) {
 		return repository.save(a);
 	}
+
 
 }

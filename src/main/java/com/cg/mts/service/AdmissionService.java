@@ -1,6 +1,11 @@
 package com.cg.mts.service;
 
 
+public class AdmissionService {
+
+}
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +60,7 @@ import com.cg.mts.repository.AdmissionRepository;
 
 
 }
+
 
 
 
