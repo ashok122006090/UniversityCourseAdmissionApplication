@@ -26,7 +26,7 @@ public class CourseController {
 		return service.addCourse(c);
 	}
 	
-	/*//removeCourse(int):Course
+	//removeCourse(int):Course
 	@DeleteMapping(value="/course/delete/{id}")
 	public String removeCourse(@PathVariable int id) {
 		return service.removeCourse(id);
@@ -48,5 +48,5 @@ public class CourseController {
 	@GetMapping(value="/course/retrieve")
 	public List<Course> viewAllCourse(){
 		return service.viewAllCourse();
-	}*/
+	}
 }
