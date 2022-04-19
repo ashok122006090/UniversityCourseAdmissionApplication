@@ -7,6 +7,13 @@ import javax.persistence.Id;
 public class Applicant {
 	@Id
 	int applicantId;
+import javax.persistence.Id;
+
+
+public class Applicant {
+	
+	String applicantId;
+
 	String applicantName;
 	int mobileNumber;
 	String applicantDegree;
