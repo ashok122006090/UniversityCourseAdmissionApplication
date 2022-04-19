@@ -8,17 +8,15 @@ import org.springframework.stereotype.Service;
 import com.cg.mts.entities.Course;
 import com.cg.mts.repository.CourseRepository;
 
-@Service
-public class CourseService implements ICourseService{
-	
-	@Autowired(required=true)
-	CourseRepository repository;
 
-	public Course addCourse(Course c) {
-		return repository.save(c);
-	}
+public interface ICourseService {
+	
+	//List<Course> viewAllCourse();
+
+	Course addCourse(Course c);
+
+	/*String removeCourse(int id);
+	Course updateCourse(int id, Course c);
+	Course viewCourse(int id);*/
+
 }
-
-	
-	
-	
