@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.cg.mts.entities.Course;
+
 import com.cg.mts.entities.UniversityStaffMember;
-import com.cg.mts.repository.CourseRepository;
+
 import com.cg.mts.repository.IUniversityStaffRepository;
 
 @Service
