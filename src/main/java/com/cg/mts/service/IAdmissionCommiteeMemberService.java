@@ -1,5 +1,5 @@
 package com.cg.mts.service;
 
-public interface AdmissionCommiteeMemberService {
+public interface IAdmissionCommiteeMemberService {
 
 }

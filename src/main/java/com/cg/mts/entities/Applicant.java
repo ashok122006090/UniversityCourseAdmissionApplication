@@ -1,6 +1,11 @@
 package com.cg.mts.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Applicant {
+	@Id
 	String applicantId;
 	String applicantName;
 	int mobileNumber;
@@ -45,5 +50,5 @@ public class Applicant {
 		this.applicantDegree = applicantDegree;
 		this.applicantGraduationPercent = applicantGraduationPercent;
 	}
-
+	
 }
