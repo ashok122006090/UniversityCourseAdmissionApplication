@@ -10,15 +10,20 @@ import com.cg.mts.repository.CourseRepository;
 
 
 public interface ICourseService {
-	
-	//List<Course> viewAllCourse();
 
+	//addCourse() call
 	Course addCourse(Course c);
 
-	/*String removeCourse(int id);
+	//removeCourse() call
+	String removeCourse(int id);
 
+	//UpdateCourse() call
 	Course updateCourse(int id, Course c);
 
-	Course viewCourse(int id);*/
+	//viewCourse()-ID based call
+	Course viewCourse(int id);
+	
+	//viewAllCourse() call
+	List<Course> viewAllCourse();
 
 }
