@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.cg.mts.entities.Applicant;
 
 @Repository
-public interface ApplicantRepository extends JpaRepository<Applicant,Integer>{
+public interface ApplicantRepository extends JpaRepository<Applicant,String>{
 	
 	
 
