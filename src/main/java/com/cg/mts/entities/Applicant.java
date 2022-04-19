@@ -1,19 +1,27 @@
 package com.cg.mts.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Applicant {
+	@Id
+	int applicantId;
 import javax.persistence.Id;
 
 
 public class Applicant {
 	
 	String applicantId;
+
 	String applicantName;
 	int mobileNumber;
 	String applicantDegree;
 	int applicantGraduationPercent;
-	public String getApplicantId() {
+	public int getApplicantId() {
 		return applicantId;
 	}
-	public void setApplicantId(String applicantId) {
+	public void setApplicantId(int applicantId) {
 		this.applicantId = applicantId;
 	}
 	public String getApplicantName() {
@@ -40,7 +48,7 @@ public class Applicant {
 	public void setApplicantGraduationPercent(int applicantGraduationPercent) {
 		this.applicantGraduationPercent = applicantGraduationPercent;
 	}
-	public Applicant(String applicantId, String applicantName, int mobileNumber, String applicantDegree,
+	public Applicant(int applicantId, String applicantName, int mobileNumber, String applicantDegree,
 			int applicantGraduationPercent) {
 		super();
 		this.applicantId = applicantId;
@@ -49,5 +57,5 @@ public class Applicant {
 		this.applicantDegree = applicantDegree;
 		this.applicantGraduationPercent = applicantGraduationPercent;
 	}
-
+	
 }
