@@ -12,7 +12,7 @@ public class Course {
 	String courseName;
 	String courseDuration;
 	LocalDate courseStartDate;
-	LocalDate courseEndTime;
+	LocalDate courseEndDate;
 	String courseFees;
 	public Course() {
 		// TODO Auto-generated constructor stub
@@ -24,7 +24,7 @@ public class Course {
 		this.courseName = courseName;
 		this.courseDuration = courseDuration;
 		this.courseStartDate = courseStartDate;
-		this.courseEndTime = courseEndTime;
+		this.courseEndDate = courseEndTime;
 		this.courseFees = courseFees;
 	}
 	public int getCourseId() {
@@ -51,11 +51,11 @@ public class Course {
 	public void setCourseStartDate(LocalDate courseStartDate) {
 		this.courseStartDate = courseStartDate;
 	}
-	public LocalDate getCourseEndTime() {
-		return courseEndTime;
+	public LocalDate getCourseEndDate() {
+		return courseEndDate;
 	}
-	public void setCourseEndTime(LocalDate courseEndTime) {
-		this.courseEndTime = courseEndTime;
+	public void setCourseEndDate(LocalDate courseEndDate) {
+		this.courseEndDate = courseEndDate;
 	}
 	public String getCourseFees() {
 		return courseFees;
@@ -66,7 +66,7 @@ public class Course {
 	@Override
 	public String toString() {
 		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", courseDuration=" + courseDuration
-				+ ", courseStartDate=" + courseStartDate + ", courseEndTime=" + courseEndTime + ", courseFees="
+				+ ", courseStartDate=" + courseStartDate + ", courseEndTime=" + courseEndDate + ", courseFees="
 				+ courseFees + "]";
 	}
 	

@@ -27,9 +27,9 @@ public class IUniversityStaffController {
 		return service.addUniversityStaffMember(a);
 	}
 	
-	@RequestMapping(value ="/update/{id}",method = RequestMethod.PUT)
-	public UniversityStaffMember updateUniversityStaffMember(@PathVariable int id, @RequestBody UniversityStaffMember e) {
-		return service.updateUniversityStaffMember(id,e);
+	@RequestMapping(value ="/Update/{id}",method = RequestMethod.PUT)
+	public UniversityStaffMember updateUniversityStaffMember(@PathVariable int id, @RequestBody UniversityStaffMember a) {
+		return service.updateUniversityStaffMember(id,a);
 	}
 	
 	@RequestMapping(value = "/View/{id}",method = RequestMethod.GET)
