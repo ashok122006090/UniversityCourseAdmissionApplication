@@ -4,5 +4,18 @@ import com.cg.mts.entities.UniversityStaffMember;
 
 public interface IUniversityStaffService {
 	
-UniversityStaffMember addUniversityStaffMember(UniversityStaffMember add);
+//addStaff() call
+UniversityStaffMember addUniversityStaffMember(UniversityStaffMember a);
+
+//removeStaff() call
+String deleteUniversityStaffMember(int id);
+
+//updateStaff() call
+UniversityStaffMember updateUniversityStaffMember(int id, UniversityStaffMember e);
+
+//ViewStaff()call
+UniversityStaffMember getUniversityStaffMemberById(int id);
+
+//ViewAll() call 
+ List<UniversityStaffMember> getAllUniversityStaffMember();
 }
