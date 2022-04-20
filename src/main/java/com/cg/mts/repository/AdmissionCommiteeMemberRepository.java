@@ -1,5 +1,11 @@
 package com.cg.mts.repository;
 
-public interface AdmissionCommiteeMemberRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+import com.cg.mts.entities.AdmissionCommiteeMember;
+
+@Repository
+public interface AdmissionCommiteeMemberRepository  extends JpaRepository<AdmissionCommiteeMember,Integer>{
+	
 }

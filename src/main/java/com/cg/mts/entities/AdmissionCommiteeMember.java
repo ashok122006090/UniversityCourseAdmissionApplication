@@ -1,9 +1,14 @@
 package com.cg.mts.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class AdmissionCommiteeMember {
+	@Id
 	int adminId;
 	String adminName;
-	int adminContact;
+	String adminContact;
 	public int getAdminId() {
 		return adminId;
 	}
@@ -16,17 +21,22 @@ public class AdmissionCommiteeMember {
 	public void setAdminName(String adminName) {
 		this.adminName = adminName;
 	}
-	public int getAdminContact() {
+	public String getAdminContact() {
 		return adminContact;
 	}
-	public void setAdminContact(int adminContact) {
+	public void setAdminContact(String adminContact) {
 		this.adminContact = adminContact;
 	}
-	public AdmissionCommiteeMember(int adminId, String adminName, int adminContact) {
+	public AdmissionCommiteeMember() {
+		// TODO Auto-generated constructor stub
+	}
+	public AdmissionCommiteeMember(int adminId, String adminName, String adminContact) {
 		super();
 		this.adminId = adminId;
 		this.adminName = adminName;
 		this.adminContact = adminContact;
 	}
+	
+	
 
 }
