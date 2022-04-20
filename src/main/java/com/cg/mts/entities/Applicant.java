@@ -8,7 +8,7 @@ public class Applicant {
 	@Id
 	int applicantId;
 	String applicantName;
-	int mobileNumber;
+	String mobileNumber;
 	String applicantDegree;
 	int applicantGraduationPercent;
 	public int getApplicantId() {
@@ -23,10 +23,10 @@ public class Applicant {
 	public void setApplicantName(String applicantName) {
 		this.applicantName = applicantName;
 	}
-	public int getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
-	public void setMobileNumber(int mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 	public String getApplicantDegree() {
@@ -41,7 +41,7 @@ public class Applicant {
 	public void setApplicantGraduationPercent(int applicantGraduationPercent) {
 		this.applicantGraduationPercent = applicantGraduationPercent;
 	}
-	public Applicant(int applicantId, String applicantName, int mobileNumber, String applicantDegree,
+	public Applicant(int applicantId, String applicantName, String mobileNumber, String applicantDegree,
 			int applicantGraduationPercent) {
 		super();
 		this.applicantId = applicantId;
@@ -50,5 +50,9 @@ public class Applicant {
 		this.applicantDegree = applicantDegree;
 		this.applicantGraduationPercent = applicantGraduationPercent;
 	}
+	public Applicant() {
+		super();
+	}
+	
 	
 }
