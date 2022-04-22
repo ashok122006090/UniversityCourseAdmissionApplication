@@ -3,6 +3,7 @@ package com.cg.mts.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.mts.entities.Course;
+import com.cg.mts.exception.IdNotFoundException;
 import com.cg.mts.service.ICourseService;
 import com.cg.mts.service.CourseServiceImpl;
 
@@ -22,7 +24,7 @@ public class CourseController {
 	
 	//addCourse(course):Course
 	@PostMapping(value="/course/add")
-	public Course addCourse(@RequestBody Course c) {
+	public Course addCourse(@RequestBody Course c)throws IdNotFoundException {
 		return service.addCourse(c);
 	}
 	
@@ -34,13 +36,13 @@ public class CourseController {
 	
 	//updateCourse(Course):Course
 	@PutMapping(value="/course/update/{id}") 
-	public Course updateStudent(@PathVariable int id,@RequestBody Course c) { 
+	public Course updateStudent(@PathVariable int id,@RequestBody Course c)throws IdNotFoundException { 
 		return service.updateCourse(id,c); 
 	}
 	
 	//viewCourse(int):Course
 	@GetMapping(value="/course/{id}")
-	public Course viewCourse(@PathVariable int id) {
+	public Course  viewCourse(@PathVariable int id)throws IdNotFoundException {
 		return service.viewCourse(id);
 	}
 	
