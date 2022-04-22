@@ -24,7 +24,7 @@ public class CourseController {
 	
 	//addCourse(course):Course
 	@PostMapping(value="/course/add")
-	public Course addCourse(@RequestBody Course c)throws IdNotFoundException {
+	public Course addCourse(@RequestBody Course c)throws CourseAlreadyExistsException {
 		return service.addCourse(c);
 	}
 	
