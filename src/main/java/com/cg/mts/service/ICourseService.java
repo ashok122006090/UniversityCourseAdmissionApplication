@@ -1,5 +1,8 @@
 package com.cg.mts.service;
+<<<<<<< HEAD
+=======
 
+>>>>>>> branch 'main' of https://github.com/ashok122006090/UniversityCourseAdmissionApplication.git
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

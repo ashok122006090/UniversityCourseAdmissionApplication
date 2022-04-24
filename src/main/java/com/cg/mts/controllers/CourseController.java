@@ -1,3 +1,4 @@
+
 package com.cg.mts.controllers;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.mts.entities.Course;
+import com.cg.mts.exception.CourseAlreadyExistsException;
 import com.cg.mts.exception.IdNotFoundException;
 import com.cg.mts.service.ICourseService;
 import com.cg.mts.service.CourseServiceImpl;
@@ -52,3 +54,4 @@ public class CourseController {
 		return service.viewAllCourse();
 	}
 }
+
