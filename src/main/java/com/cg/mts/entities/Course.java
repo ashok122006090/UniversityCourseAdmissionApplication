@@ -27,6 +27,7 @@ public class Course {
 		this.courseStartDate = courseStartDate;
 		this.courseEndDate = courseEndTime;
 		this.courseFees = courseFees;
+
 	}
 	public int getCourseId() {
 		return courseId;
@@ -70,6 +71,8 @@ public class Course {
 				+ ", courseStartDate=" + courseStartDate + ", courseEndTime=" + courseEndDate + ", courseFees="
 				+ courseFees + "]";
 	}
+	
+	
 	
 	
 	

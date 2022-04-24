@@ -1,4 +1,6 @@
+
 package com.cg.mts.controllers;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,3 +54,4 @@ public class CourseController {
 		return service.viewAllCourse();
 	}
 }
+

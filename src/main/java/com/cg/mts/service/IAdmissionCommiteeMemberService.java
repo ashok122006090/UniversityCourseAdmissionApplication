@@ -1,6 +1,7 @@
 package com.cg.mts.service;
 
 
+
 import java.util.List;
 
 import com.cg.mts.entities.Admission;
@@ -27,4 +28,7 @@ public interface IAdmissionCommiteeMemberService {
 		
 		AdmissionStatus provideAdmissionResult(Applicant getapplicantId, Admission adm);
 
-	}
+
+
+}
+
