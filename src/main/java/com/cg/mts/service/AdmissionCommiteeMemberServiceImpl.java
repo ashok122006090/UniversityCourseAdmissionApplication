@@ -5,7 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cg.mts.entities.Admission;
 import com.cg.mts.entities.AdmissionCommiteeMember;
+import com.cg.mts.entities.AdmissionStatus;
+import com.cg.mts.entities.Applicant;
 import com.cg.mts.repository.AdmissionCommiteeMemberRepository;
 
 @Service
@@ -56,6 +59,12 @@ public  class AdmissionCommiteeMemberServiceImpl implements IAdmissionCommiteeMe
 	//viewAllAdmissionCommiteeMember()
 	public List<AdmissionCommiteeMember> viewAllAdmissionCommiteeMember() {
 		return repository.findAll();
+	}
+	
+	public AdmissionStatus provideAdmissionResult(Applicant applicant,Admission admission)
+	{
+		return applicant.getStatus();
+		
 	}
 
 	

@@ -1,13 +1,20 @@
 package com.cg.mts.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class AdmissionCommiteeMember {
 	@Id
+	@GeneratedValue
 	int adminId;
+	@NotBlank(message="Name is mandatory")
 	String adminName;
+	@Pattern(regexp="[6-9]{1}[0-9]{9}",message ="contact number must have 10 digits")
 	String adminContact;
 	public int getAdminId() {
 		return adminId;

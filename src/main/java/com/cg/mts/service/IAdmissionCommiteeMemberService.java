@@ -3,7 +3,10 @@ package com.cg.mts.service;
 
 import java.util.List;
 
+import com.cg.mts.entities.Admission;
 import com.cg.mts.entities.AdmissionCommiteeMember;
+import com.cg.mts.entities.AdmissionStatus;
+import com.cg.mts.entities.Applicant;
 
 public interface IAdmissionCommiteeMemberService {
 
@@ -19,7 +22,9 @@ public interface IAdmissionCommiteeMemberService {
 		//viewAdmissionCommiteeMember()-ID based call
 		AdmissionCommiteeMember viewAdmissionCommiteeMember(int id);
 		
-		//viewAllCourse() call
+		//viewAllAdmissionCommiteeMember() call
 		List<AdmissionCommiteeMember> viewAllAdmissionCommiteeMember();
+		
+		AdmissionStatus provideAdmissionResult(Applicant getapplicantId, Admission adm);
 
 	}
