@@ -1,12 +1,19 @@
 package com.cg.mts.service;
 
+
 import java.util.List;
 
+
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.cg.mts.entities.AdmissionStatus;
 import com.cg.mts.entities.Applicant;
+import com.cg.mts.exceptions.ApplicantNotFoundException;
 import com.cg.mts.repository.ApplicantRepository;
 
 @Service
@@ -19,6 +26,7 @@ public class ApplicantService implements IApplicantService{
 		return repository.save(a);
 	}
 
+
 	@Override
 	public List<Applicant> viewAllApplicant() {
 		// TODO Auto-generated method stub
@@ -26,9 +34,11 @@ public class ApplicantService implements IApplicantService{
 	}
 
 	@Override
-	public Applicant viewApplicant(int id) {
-		// TODO Auto-generated method stub
-		return repository.findById(id).get();
+	public ResponseEntity<Applicant> viewApplicant(int id) throws ApplicantNotFoundException{
+		
+		Applicant a1=repository.findById(id)
+		.orElseThrow(()->new ApplicantNotFoundException("No applicant with this id"));
+		return ResponseEntity.ok().body(a1);
 	}
 
 	@Override
@@ -55,8 +65,9 @@ public class ApplicantService implements IApplicantService{
 	}
 
 	@Override
-	public void deleteApplicant(int id) {
+	public void deleteApplicant(int id){
 		Applicant a1=repository.findById(id).get();
+				
 		if(a1==null)
 			System.out.println("no record find with given id");
 		
@@ -67,4 +78,6 @@ public class ApplicantService implements IApplicantService{
 	
 		
 	}
+
+
 }

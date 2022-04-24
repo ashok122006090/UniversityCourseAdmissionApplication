@@ -2,15 +2,19 @@ package com.cg.mts.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.cg.mts.entities.AdmissionStatus;
 import com.cg.mts.entities.Applicant;
+import com.cg.mts.exceptions.ApplicantNotFoundException;
 
 public interface IApplicantService{
 	Applicant addApplicant(Applicant a);
 	Applicant updateApplicant(int id,Applicant ap);
 	void deleteApplicant(int id);
-	Applicant viewApplicant(int id);
+	ResponseEntity<Applicant> viewApplicant(int id) throws ApplicantNotFoundException;
 	List<Applicant> viewAllApplicant();
-	List<Applicant> viewAllApplicantsByStatus(AdmissionStatus status);
+	
+	public List<Applicant> viewAllApplicantsByStatus(AdmissionStatus status);
 
 }

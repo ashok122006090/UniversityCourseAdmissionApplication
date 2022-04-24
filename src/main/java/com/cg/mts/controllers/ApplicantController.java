@@ -3,6 +3,7 @@ package com.cg.mts.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.mts.entities.AdmissionStatus;
 import com.cg.mts.entities.Applicant;
+import com.cg.mts.exceptions.ApplicantNotFoundException;
 import com.cg.mts.service.ApplicantService;
 
 
@@ -33,12 +35,13 @@ public class ApplicantController{
 		return service.viewAllApplicant();
 	}
 	@GetMapping("/applicant/id/{id}")
-	public Applicant viewApplicant(@PathVariable int id)
+	public ResponseEntity<Applicant> viewApplicant(@PathVariable int id)throws ApplicantNotFoundException
 	{
 		return service.viewApplicant(id);
 	}
+	
 	@GetMapping("/applicant/status/{status}")
-	public  List<Applicant> viewAllApplicantsByStatus(@PathVariable AdmissionStatus status)
+	public  List<Applicant> viewAllApplicantsByStatus(@PathVariable("status") AdmissionStatus status)
 	{
 		return service.viewAllApplicantsByStatus(status);
 	}
