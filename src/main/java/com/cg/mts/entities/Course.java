@@ -4,20 +4,41 @@ import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
+//creates a table named "course" in the database
 public class Course {
 	
+	//Primary key- courseID
 	@Id
 	int courseId;
+	
+	//validation for variable courseName
+	@NotEmpty(message = "Course-Name sould not be empty")
 	String courseName;
+	
+	//validation for variable courseDuration
+	@Pattern(regexp = "[1-6]{1}",message = "Course-Duration must be within the range 1 to 6 Years")
 	String courseDuration;
+	
 	LocalDate courseStartDate;
 	LocalDate courseEndDate;
+	
+	//validation for variable courseFees
+	@Digits(integer=5, fraction=2)
+	@Min(value = 50000)
 	String courseFees;
+	
+	//Default constructor Course()
 	public Course() {
-		// TODO Auto-generated constructor stub
 	}
+	
+	//Parameterized constructor
 	public Course(int courseId, String courseName, String courseDuration, LocalDate courseStartDate,
 			LocalDate courseEndTime, String courseFees) {
 		super();
@@ -27,8 +48,9 @@ public class Course {
 		this.courseStartDate = courseStartDate;
 		this.courseEndDate = courseEndTime;
 		this.courseFees = courseFees;
-
 	}
+	
+	//getters and setters
 	public int getCourseId() {
 		return courseId;
 	}
@@ -65,16 +87,12 @@ public class Course {
 	public void setCourseFees(String courseFees) {
 		this.courseFees = courseFees;
 	}
+	
+	//toString() Method
 	@Override
 	public String toString() {
 		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", courseDuration=" + courseDuration
 				+ ", courseStartDate=" + courseStartDate + ", courseEndTime=" + courseEndDate + ", courseFees="
 				+ courseFees + "]";
 	}
-	
-	
-	
-	
-	
-
 }
