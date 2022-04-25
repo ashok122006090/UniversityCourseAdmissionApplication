@@ -1,6 +1,5 @@
 package com.cg.mts.service;
 
-<<<<<<< HEAD
 
 import java.util.List;
 
@@ -20,16 +19,5 @@ public interface IApplicantService{
 	public List<Applicant> viewAllApplicantsByStatus(AdmissionStatus status);
 
 }
-=======
-import com.cg.mts.entities.Applicant;
 
-public interface IApplicantService{
-	Applicant addApplicant(Applicant add);
-	//Applicant updateApplicant();
-	//Applicant deleteApplicant();
-	//Applicant viewApplicant();
-	//Applicant viewAllApplicant();
-	
 
-}
->>>>>>> branch 'main' of https://github.com/ashok122006090/UniversityCourseAdmissionApplication.git

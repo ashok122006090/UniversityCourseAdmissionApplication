@@ -10,7 +10,7 @@ public class UniversityCourseAdministrationApplApplication {
 		SpringApplication.run(UniversityCourseAdministrationApplApplication.class, args);
 
 		System.out.println("connected");
-		System.out.println("connect");
+
 	}
 
 }
