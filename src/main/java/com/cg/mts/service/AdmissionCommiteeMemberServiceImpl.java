@@ -55,7 +55,7 @@ public  class AdmissionCommiteeMemberServiceImpl implements IAdmissionCommiteeMe
 
 	//viewAdmissionCommiteeMember()- ID based
 	public ResponseEntity<AdmissionCommiteeMember> viewAdmissionCommiteeMember(int id) throws ACMIdNotFoundException{
-		AdmissionCommiteeMember acm =  repository.findById(id).orElseThrow(()->new ACMIdNotFoundException("No applicant with this id"));
+		AdmissionCommiteeMember acm =  repository.findById(id).orElseThrow(()->new ACMIdNotFoundException("No member with this id"));
 		return ResponseEntity.ok().body(acm);
 	}
 
