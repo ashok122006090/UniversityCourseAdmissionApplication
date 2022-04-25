@@ -3,12 +3,14 @@ package com.cg.mts.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.cg.mts.entities.Admission;
 import com.cg.mts.entities.AdmissionCommiteeMember;
 import com.cg.mts.entities.AdmissionStatus;
 import com.cg.mts.entities.Applicant;
+import com.cg.mts.exception.ACMIdNotFoundException;
 import com.cg.mts.repository.AdmissionCommiteeMemberRepository;
 
 @Service
@@ -52,8 +54,9 @@ public  class AdmissionCommiteeMemberServiceImpl implements IAdmissionCommiteeMe
 	}
 
 	//viewAdmissionCommiteeMember()- ID based
-	public AdmissionCommiteeMember viewAdmissionCommiteeMember(int id) {
-		return repository.findById(id).get();
+	public ResponseEntity<AdmissionCommiteeMember> viewAdmissionCommiteeMember(int id) throws ACMIdNotFoundException{
+		AdmissionCommiteeMember acm =  repository.findById(id).orElseThrow(()->new ACMIdNotFoundException("No applicant with this id"));
+		return ResponseEntity.ok().body(acm);
 	}
 
 	//viewAllAdmissionCommiteeMember()
@@ -64,6 +67,7 @@ public  class AdmissionCommiteeMemberServiceImpl implements IAdmissionCommiteeMe
 	public AdmissionStatus provideAdmissionResult(Applicant applicant,Admission admission)
 	{
 		return applicant.getStatus();
+		
 		
 	}
 

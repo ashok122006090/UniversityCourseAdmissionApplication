@@ -4,6 +4,8 @@ package com.cg.mts.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.cg.mts.entities.Admission;
 import com.cg.mts.entities.AdmissionCommiteeMember;
 import com.cg.mts.entities.AdmissionStatus;
@@ -21,7 +23,7 @@ public interface IAdmissionCommiteeMemberService {
 		AdmissionCommiteeMember updateAdmissionCommiteeMember(int id, AdmissionCommiteeMember acm);
 
 		//viewAdmissionCommiteeMember()-ID based call
-		AdmissionCommiteeMember viewAdmissionCommiteeMember(int id);
+		ResponseEntity<AdmissionCommiteeMember> viewAdmissionCommiteeMember(int id);
 		
 		//viewAllAdmissionCommiteeMember() call
 		List<AdmissionCommiteeMember> viewAllAdmissionCommiteeMember();

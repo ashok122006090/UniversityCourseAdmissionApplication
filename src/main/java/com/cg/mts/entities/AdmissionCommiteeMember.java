@@ -16,8 +16,6 @@ public class AdmissionCommiteeMember {
 	@Id
 
 	@GeneratedValue
-
-
 	int adminId;
 	@NotBlank(message="Name is mandatory")
 	String adminName;

@@ -2,7 +2,10 @@ package com.cg.mts.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.cg.mts.entities.UniversityStaffMember;
+import com.cg.mts.exception.UniversityStaffException;
 
 public interface IUniversityStaffService {
 
@@ -16,7 +19,7 @@ public interface IUniversityStaffService {
 	UniversityStaffMember updateUniversityStaffMember(int id, UniversityStaffMember e);
 
 	//ViewStaff()call
-	UniversityStaffMember getUniversityStaffMemberById(int id);
+	ResponseEntity<UniversityStaffMember> getUniversityStaffMemberById(int id) throws UniversityStaffException;
 
 	//ViewAll() call 
 	List<UniversityStaffMember> getAllUniversityStaffMember();
