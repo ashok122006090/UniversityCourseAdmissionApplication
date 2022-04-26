@@ -3,6 +3,7 @@ package com.cg.mts.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import com.cg.mts.entities.Admission;
 import com.cg.mts.entities.AdmissionCommiteeMember;
 import com.cg.mts.entities.AdmissionStatus;
 import com.cg.mts.entities.Applicant;
+import com.cg.mts.exception.ACMIdNotFoundException;
 import com.cg.mts.service.IAdmissionCommiteeMemberService;
 
 
@@ -43,8 +45,8 @@ public class AdmissionCommiteeMemberController {
 	}
 	
 	//viewAdmissionCommiteeMember(int):AdmissionCommiteeMember
-	@GetMapping(value="/commiteemember/{id}")
-	public AdmissionCommiteeMember viewAdmissionCommiteeMember(@PathVariable int id) {
+	@GetMapping(value="/commiteemember/{id}") 
+	public ResponseEntity<AdmissionCommiteeMember> viewAdmissionCommiteeMember(@PathVariable int id) throws ACMIdNotFoundException {
 		return service.viewAdmissionCommiteeMember(id);
 	}
 	
